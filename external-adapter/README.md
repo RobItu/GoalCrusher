@@ -5,11 +5,11 @@ This folder contains the external adapter built to receive user daily health dat
 I used [this](https://github.com/thodges-gh/CL-EA-NodeJS-Template "CL-EA-NodeJS-Template") to create my adapter. Or you can just copy the files above.
 
 ## FitBit API
-..*Create a developer account and register an app.
+  *Create a developer account and register an app.
 
-...Make sure all Redirect URI fields point to http://localhost
-...Allow Read and Write access
-...[OAuth 2.0 tutorial page is very helpful](https://dev.fitbit.com/apps/oauthinteractivetutorial?clientEncodedId=238VNJ&clientSecret=707495e811e6a3e100516d5eb53d224c&redirectUri=http://localhost&applicationType=PERSONAL) is very helpful too
+   Make sure all Redirect URI fields point to http://localhost
+   Allow Read and Write access
+   [OAuth 2.0 tutorial page is very helpful](https://dev.fitbit.com/apps/oauthinteractivetutorial?clientEncodedId=238VNJ&clientSecret=707495e811e6a3e100516d5eb53d224c&redirectUri=http://localhost&applicationType=PERSONAL) is very helpful too
 
 
 ## Call the external adapter/API server
