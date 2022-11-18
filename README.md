@@ -36,4 +36,4 @@ This is the main contract from which users will be interacting with. It is respo
 - Load the contract in Remix
 - Select GoalCrusher.sol in contracts list and deploy using *Injected Provider*
   - Deploy with FitbitConsumer.sol address
-![alt-text](https://i.ibb.co/51CzBCs/Capture.png)
+  - ![alt-text](https://i.ibb.co/51CzBCs/Capture.png)
