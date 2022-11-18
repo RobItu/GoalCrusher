@@ -18,7 +18,7 @@ Remix IDE was used for the creations of all smart contracts (`FitbitConsumer.sol
 All user interaction will be on `GoalCrusher.sol`, but they will also need the address of a deployed `FitbitConsumer.sol` contract. 
 
 ### Deploying FitbitConsumer.sol on Remix
-This contract is chainlink's [Mutliword Consumer Contract](https://docs.chain.link/any-api/get-request/examples/multi-variable-responses) from its any API resources. When calling its function `requestCaloriesData()`, it will fetch two variables: calories spent and caloric goal.
+This contract is chainlink's [Mutliword Consumer Contract](https://docs.chain.link/any-api/get-request/examples/multi-variable-responses) from its any API resources. When calling its function `requestCaloriesData()`, it will fetch off-chain data for the two variables: calories spent and caloric goal.
 - Load the FitbitConsumer.sol contract on Remix
 - Change `setChainlinkToken`, `setChainlinkOracle` and `jobId` if you have your own network, oracle and job id that you want to use. 
 ```bash
@@ -33,4 +33,7 @@ This contract is chainlink's [Mutliword Consumer Contract](https://docs.chain.li
 
 This is the main contract from which users will be interacting with. It is responsible from retrieving caloric data from FitbitConsumer.sol and allowing users to check if they have met their caloric target. 
 
-- 
+- Load the contract in Remix
+- Select GoalCrusher.sol in contracts list and deploy using *Injected Provider*
+  - Deploy with FitbitConsumer.sol address
+![alt-text](https://i.ibb.co/51CzBCs/Capture.png)
