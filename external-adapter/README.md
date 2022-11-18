@@ -23,9 +23,9 @@ On a separate terminal, run:
 ```bash
 curl -X POST -H "content-type:application/json" "http://localhost:8080/" --data '{ "id": 0, "data": {"date":"today"} }'
 ```
-"today" can be replaced with a specific date in mm/dd/yyyy
+"today" can be replaced with a specific date in yyyy-mm-dd
 ```bash
-curl -X POST -H "content-type:application/json" "http://localhost:8080/" --data '{ "id": 0, "data": {"date":"mm/dd/yyyy"} }'
+curl -X POST -H "content-type:application/json" "http://localhost:8080/" --data '{ "id": 0, "data": {"date":"yyyy-mm-dd"} }'
 ```
 ## Output
 ```bash
