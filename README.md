@@ -40,5 +40,9 @@ This is the main contract from which users will be interacting with. It is respo
 
 ### Using GoalCrusher.sol
 
-Once all contracts are deployed, the user must call `callFitbitConsumer()` to populate `caloriesExpended` and `caloriesGoal` variables and automatically check if caloriesGoal was surpassed. 
-  - Sometimes `callFitbitConsumer` will fail to populate the variables on time (leading them to report 0 when the Fitbitconsumer.sol contract already has a non-zero value). Waiting a minute or two and then calling `getCalories()` will usually fix this problem and populate the calories variables.  
+- Once all contracts are deployed, users can send collateral in ETH to the contract using `setCollateral()` function
+- The user must call `callFitbitConsumer()` to populate `caloriesExpended` and `caloriesGoal` variables and automatically check if caloriesGoal was surpassed. 
+  - Sometimes `callFitbitConsumer()` function will fail to populate the variables on time (leading them to report 0 when the Fitbitconsumer.sol contract already has a non-zero value). Waiting a minute or two and then calling `getCalories()` function will usually fix this problem and populate the calories variables.
+- If the caloric goal was met and/or surpassed, users can withdraw their collateral with `withdraw` function
+- Once a predetermined amount of goals has been achieved (determined by variable `NFT_GOALS_REQ`), users can use the `mintNFT` function to mint their NFT.
+  - Users can check their minted NFTs on [OpenSea Testnet](https://testnets.opensea.io) 
