@@ -3,8 +3,8 @@
 ## What is GoalCrusher
 GoalCrusher is an application that allows you to earn NFT rewards by accomplishing fitness goals. With the use of Chainlink oracles and external adapters, off-chain data is transmitted on-chain in a verifiable and secure way, allowing for accurate and fair computations to be executed. GoalCrusher further incentivizes users in achieving their goals by allowing them to deposit collateral in ETH, risking losing it all if they do not accomplish their goal by the end of the day. 
 
-## How does works
-Currently, only one goal is able to be achieved: Hitting your caloric target for weight loss. This caloric target is determined by your FitBit and is calculated with the use of BMR and activity data.
+## How it works
+Currently, only one goal is able to be achieved: Hitting your expended caloric goal for weight loss. This caloric target is determined by your FitBit and is calculated with the use of BMR and activity data.
 
 - If the user met and/or passed their caloric target, they'll be allowed to withdraw their collateral if it exists and the number of goals achieved will increase by one. 
 - At any time, the user can check if they have met their caloric goal.
@@ -14,7 +14,7 @@ Currently, only one goal is able to be achieved: Hitting your caloric target for
 
 **EVERY SMART CONTRACT HAS BEEN BUILT FOR GOERLI TESTNET ONLY**
 
-Remix IDE was used for the creations of all smart contracts (`FitbitConsumer.sol`, `GoalCrusher.sol`, `NFTcontract.sol`). 
+Remix IDE was used for the creations of all smart contracts (`FitbitConsumer.sol` & `GoalCrusher.sol`). 
 All user interaction will be on `GoalCrusher.sol`, but they will also need the address of a deployed `FitbitConsumer.sol` contract. 
 
 ### Deploying FitbitConsumer.sol on Remix
@@ -31,7 +31,7 @@ This contract is chainlink's [Mutliword Consumer Contract](https://docs.chain.li
 
 ### Deploying GoalCrusher.sol
 
-This is the main contract from which users will be interacting with. It is responsible from retrieving caloric data from FitbitConsumer.sol and allowing users to check if they have met their caloric target. 
+This is the main contract from which users will be interacting with. It is responsible from retrieving caloric data from FitbitConsumer.sol and allowing users to check if they have met their caloric target. An NFT contract address is hard-coded but can be changed if a separate NFT contract is needed.
 
 - Load the contract in Remix
 - Select GoalCrusher.sol in contracts list and deploy using *Injected Provider*
@@ -45,3 +45,6 @@ This is the main contract from which users will be interacting with. It is respo
   - Sometimes `callFitbitConsumer()` function will fail to populate the variables on time (leading them to report 0 when the Fitbitconsumer.sol contract has a non-zero value). Waiting a minute or two and then calling `getCalories()` function will usually fix this problem and populate the calories variables.
 - If the caloric goal was met and/or surpassed, users can withdraw their collateral with `withdraw` function
 - Once a predetermined amount of goals has been achieved (determined by variable `NFT_GOALS_REQ`), users can use the `mintNFT` function to mint their NFT. Users can check their minted NFTs on [OpenSea Testnet](https://testnets.opensea.io) 
+
+## More information
+This project was created during Chainlink's Fall Hackathon 2022.
