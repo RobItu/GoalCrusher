@@ -1,4 +1,4 @@
-# Chainlink NodeJS External Adapter
+# Chainlink NodeJS FitBit External Adapter
 
 This folder contains the external adapter built to receive user daily health data from fitbit. Once the API-specific values (headers and API key authentication) have been added to the adapter, data will be formatted when returned to the Chainlink node. There is no need to use any additional frameworks or to run a Chainlink node in order to test the adapter.
 
