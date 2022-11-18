@@ -7,7 +7,7 @@ I used [this](https://github.com/thodges-gh/CL-EA-NodeJS-Template "CL-EA-NodeJS-
 
 ## FitBit API
 - Create a developer account and register an app [here](https://dev.fitbit.com/login) .
-- Make sure Redirect URI field points to http://localhost
+- Make sure Redirect URI field points to `http://localhost`
 - Allow Read and Write access
 - [OAuth 2.0 tutorial page](https://dev.fitbit.com/apps/oauthinteractivetutorial?clientEncodedId=238VNJ&clientSecret=707495e811e6a3e100516d5eb53d224c&redirectUri=http://localhost&applicationType=PERSONAL) is very helpful too
 
@@ -25,6 +25,10 @@ curl -X POST -H "content-type:application/json" "http://localhost:8080/" --data 
 "today" can be replaced with a specific date in mm/dd/yyyy
 ```bash
 curl -X POST -H "content-type:application/json" "http://localhost:8080/" --data '{ "id": 0, "data": {"date":"mm/dd/yyyy"} }'
+```
+## Output
+```bash
+{"jobRunID":1,"data":{"activities":[],"goals":{"activeMinutes":30,"caloriesOut":2603,"distance":8.05,"floors":10,"steps":10000},"summary":{"activeScore":-1,"activityCalories":773,"caloriesBMR":1036,ut":1645,"distances":[{"activity":"total","distance":3.81},{"activity":"tracker","distance":3.81},{"activity":"loggedActivities","distance":0},{"activity":"veryActive","distance":0.35},{"activity":"Active","distance":0.23},{"activity":"lightlyActive","distance":3.23},{"activity":"sedentaryActive","distance":0}],"elevation":30.48,"fairlyActiveMinutes":8,"floors":10,"heartRateZones":[{"caloriesO1629,"max":99,"min":30,"minutes":661,"name":"Out of Range"},{"caloriesOut":132.16405,"max":138,"min":99,"minutes":24,"name":"Fat Burn"},{"caloriesOut":0,"max":168,"min":138,"minutes":0,"name":"CardiriesOut":0,"max":220,"min":168,"minutes":0,"name":"Peak"}],"lightlyActiveMinutes":187,"marginalCalories":413,"restingHeartRate":58,"sedentaryMinutes":476,"steps":5651,"veryActiveMinutes":7},"result":null,"statusCode":200}
 ```
 
 ## Chainlink node job config
