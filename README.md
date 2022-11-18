@@ -48,3 +48,4 @@ This is the main contract from which users will be interacting with. It is respo
 
 ## More information
 This project was created during Chainlink's Fall Hackathon 2022.
+Follow me on [Twitter!](https://twitter.com/ancientveil)
