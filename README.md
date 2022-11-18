@@ -1,4 +1,4 @@
-# GoalCrusher
+# GoalCrusher | Chainlink Hackathon Fall 2022
 
 ## What is GoalCrusher
 GoalCrusher is an application that allows you to earn NFT rewards by accomplishing fitness goals. With the use of Chainlink oracles and external adapters, off-chain data is transmitted on-chain in a verifiable and secure way, allowing for accurate and fair computations to be executed. GoalCrusher further incentivizes users in achieving their goals by allowing them to deposit collateral in ETH, risking losing it all if they do not accomplish their goal by the end of the day. 
