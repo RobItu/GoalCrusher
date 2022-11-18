@@ -7,9 +7,10 @@ I used [this](https://github.com/thodges-gh/CL-EA-NodeJS-Template "CL-EA-NodeJS-
 
 ## FitBit API
 - Create a developer account and register an app [here](https://dev.fitbit.com/login) .
-- Make sure Redirect URI field points to `http://localhost`
-- Allow Read and Write access
-- [OAuth 2.0 tutorial page](https://dev.fitbit.com/apps/oauthinteractivetutorial?clientEncodedId=238VNJ&clientSecret=707495e811e6a3e100516d5eb53d224c&redirectUri=http://localhost&applicationType=PERSONAL) is very helpful too
+  - Make sure Redirect URI field points to `http://localhost`
+  - Allow Read and Write access
+  - [OAuth 2.0 tutorial page](https://dev.fitbit.com/apps/oauthinteractivetutorialclientEncodedId=238VNJ&clientSecret=707495e811e6a3e100516d5eb53d224c&redirectUri=http://localhost&applicationType=PERSONAL) is very helpful too
+- FitBit API documentation found [here](https://dev.fitbit.com/build/reference/web-api/)
 
 
 ## Call the external adapter/API server
