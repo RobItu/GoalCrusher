@@ -1,9 +1,9 @@
 # GoalCrusher
 
-## What is GoalCrusher?
+## What is GoalCrusher
 GoalCrusher is an application that allows you to earn NFT rewards by accomplishing fitness goals. With the use of Chainlink oracles and external adapters, off-chain data is transmitted on-chain in a verifiable and secure way, allowing for accurate and fair computations to be executed. GoalCrusher further incentivizes users in achieving their goals by allowing them to deposit collateral in ETH, risking losing it all if they do not accomplish their goal by the end of the day. 
 
-## How does it work?
+## How does works
 Currently, only one goal is able to be achieved: Hitting your caloric target for weight loss. This caloric target is determined by your FitBit and is calculated with the use of BMR and activity data.
 
 - If the user met and/or passed their caloric target, they'll be allowed to withdraw their collateral if it exists and the number of goals achieved will increase by one. 
@@ -37,3 +37,8 @@ This is the main contract from which users will be interacting with. It is respo
 - Select GoalCrusher.sol in contracts list and deploy using *Injected Provider*
   - Deploy with FitbitConsumer.sol address
   - ![alt-text](https://i.ibb.co/51CzBCs/Capture.png)
+
+### Using GoalCrusher.sol
+
+Once all contracts are deployed, the user must call `callFitbitConsumer()` to populate `caloriesExpended` and `caloriesGoal` variables and automatically check if caloriesGoal was surpassed. 
+  - Sometimes `callFitbitConsumer` will fail to populate the variables on time (leading them to report 0 when the Fitbitconsumer.sol contract already has a non-zero value). Waiting a minute or two and then calling `getCalories()` will usually fix this problem and populate the calories variables.  
